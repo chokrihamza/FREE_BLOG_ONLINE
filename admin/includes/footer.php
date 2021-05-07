@@ -1,13 +1,11 @@
-</div>
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<s cript src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 
-  <!--                Bootstrap Core JavaScript -->
-  <scr ipt src="js/bootstrap.min.js">
-    </script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>
