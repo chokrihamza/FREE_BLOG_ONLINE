@@ -3,7 +3,7 @@
 <div id="wrapper">
 
   <!-- Navigation -->
-  <?php  include "includes/admin_navigation.php"   ?>
+  <?php include "includes/admin_navigation.php"   ?>
   <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Welcom to the Admin panel
+            Welcome to the Admin panel
             <small>Author</small>
           </h1>
 
@@ -26,4 +26,4 @@
   </div>
   <!-- /#page-wrapper -->
 </div>
-<?php  include "includes/admin_footer.php"   ?>
+<?php include "includes/admin_footer.php"   ?>
