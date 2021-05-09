@@ -1,5 +1,5 @@
 <?php
-function confirm($reslut)
+function confirmQuery($reslut)
 {
   global $connection;
   if (!$reslut) {
