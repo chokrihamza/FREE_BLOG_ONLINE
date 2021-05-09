@@ -31,7 +31,14 @@
       echo "<td>{$post_id}</td>";
       echo "<td>{$post_author}</td>";
       echo "<td>{$post_title}</td>";
-      echo "<td>{$post_category_id}</td>";
+      $query = "SELECT * FROM categories WHERE cat_id={$post_category_id} ";
+      $select_categories_id = mysqli_query($connection, $query);
+      while ($row = mysqli_fetch_assoc($select_categories_id)) {
+        $cat_id = $row['cat_id'];
+        $cat_title = $row['cat_title'];
+        echo "<td>{$cat_title}</td>";
+      }
+
       echo "<td>{$post_status}</td>";
       echo "<td><img width=100 src='../images/$post_image' alt='image'/></td>";
       echo "<td>{$post_tags}</td>";
@@ -39,8 +46,9 @@
       echo "<td>{$post_date}</td>";
       echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
       echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
-      
+
       echo "</tr>";
+      
     }
 
 
