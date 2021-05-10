@@ -19,9 +19,14 @@
         $post_author = $row['post_author'];
         $post_date = $row['post_date'];
         $post_image = $row['post_image'];
-        $post_content = substr($row['post_content'],0,100) ;
-        //echo "<li><a href='#'>{$post_title}</a></li>";
-      ?>
+        $post_content = substr($row['post_content'], 0, 100);
+        $post_status = $row['post_status'];
+        if ($post_status !== 'published') {
+          echo "<h1 class='text-center'>No post Sorry</h1>";
+        } else{
+
+        
+        //echo "<li><a href='#'>{$post_title}</a></li>";?>
 
       <h1 class="page-header">
         Page Heading
@@ -29,7 +34,7 @@
       </h1>
       <!-- First Blog Post -->
       <h2>
-        <a href="post.php?p_id=<?php echo $post_id ;?>"><?php echo $post_title ?></a>
+        <a href="post.php?p_id=<?php echo $post_id ; ?>"><?php echo $post_title ?></a>
       </h2>
       <p class="lead">
         by <a href="index.php"><?php echo $post_author ?></a>
@@ -42,7 +47,7 @@
       <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
       <hr>
-      <?php } ?>
+      <?php }} ?>
 
 
     </div>

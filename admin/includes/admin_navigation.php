@@ -63,7 +63,7 @@
           </li>
         </ul>
       </li>
-      <li class="active">
+      <li class="">
         <a href="comments.php"><i class="fa fa-fw fa-file"></i>Comments</a>
       </li>
       <li>
@@ -78,7 +78,7 @@
           </li>
         </ul>
       </li>
-      <li class="active">
+      <li class="">
         <a href="blank-page.html"><i class="fa fa-fw fa-dashboard"></i> Profile</a>
       </li>
     </ul>
