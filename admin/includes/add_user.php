@@ -1,26 +1,26 @@
 <?php
 if (isset($_POST["create_user"])) {
-  $post_title = $_POST['user_id'];
-  $post_author = $_POST['user_firstname'];
-  $post_category_id = $_POST['user_lastname'];
-  $post_status = $_POST['post_role'];
+  $user_id = $_POST['user_id'];
+  echo $user_firstname = $_POST['user_firstname'];
+  $user_lastname = $_POST['user_lastname'];
+  $user_role = $_POST['user_role'];
   // $post_image = $_FILES['image']['name'];
   // $post_image_temp = $_FILES['image']['tmp_name'];
-  $post_tags = $_POST['post_name'];
-  $post_content = $_POST['post_email'];
-  $post_content = $_POST['post_password'];
+  $username = $_POST['username'];
+  $user_email = $_POST['user_email'];
+  $user_password = $_POST['user_password'];
 
   //$post_comment_count = 4;
-  move_uploaded_file($post_image_temp, "../images/$post_image");
-  $query =
-    "INSERT INTO posts(post_category_id,post_title,
-  post_author,post_date,post_image,post_content,
-  post_tags,post_status) ";
-  $query .= "VALUES('{$post_category_id}','{$post_title}','{$post_author}',now(),
-  '{$post_image}','{$post_tags}','{$post_content}','{$post_status}') ";
+  // move_uploaded_file($post_image_temp, "../images/$post_image");
+  // $query =
+  //   "INSERT INTO posts(post_category_id,post_title,
+  // post_author,post_date,post_image,post_content,
+  // post_tags,post_status) ";
+  // $query .= "VALUES('{$post_category_id}','{$post_title}','{$post_author}',now(),
+  // '{$post_image}','{$post_tags}','{$post_content}','{$post_status}') ";
 
-  $create_post_query = mysqli_query($connection, $query);
-  confirmQuery($create_post_query);
+  // $create_post_query = mysqli_query($connection, $query);
+  // confirmQuery($create_post_query);
 }
 
 
