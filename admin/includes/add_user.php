@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST["create_user"])) {
-  $user_id = $_POST['user_id'];
-  echo $user_firstname = $_POST['user_firstname'];
+  //$user_id = $_POST['user_id'];
+  $user_firstname = $_POST['user_firstname'];
   $user_lastname = $_POST['user_lastname'];
   $user_role = $_POST['user_role'];
   // $post_image = $_FILES['image']['name'];
@@ -12,15 +12,14 @@ if (isset($_POST["create_user"])) {
 
   //$post_comment_count = 4;
   // move_uploaded_file($post_image_temp, "../images/$post_image");
-  // $query =
-  //   "INSERT INTO posts(post_category_id,post_title,
-  // post_author,post_date,post_image,post_content,
-  // post_tags,post_status) ";
-  // $query .= "VALUES('{$post_category_id}','{$post_title}','{$post_author}',now(),
-  // '{$post_image}','{$post_tags}','{$post_content}','{$post_status}') ";
-
-  // $create_post_query = mysqli_query($connection, $query);
-  // confirmQuery($create_post_query);
+  $query =
+  "INSERT INTO users(user_firstname,
+   user_lastname,user_role,username,user_email,
+   user_password) ";
+  $query .= "VALUES('{$user_firstname}','{$user_lastname}',
+   '{$user_role}','{$username}','{$user_email}','{$user_password}') ";
+  $create_user_query = mysqli_query($connection, $query);
+  confirmQuery($create_user_query);
 }
 
 
@@ -61,8 +60,8 @@ if (isset($_POST["create_user"])) {
     <input type="email" class="form-control" name="user_email" />
   </div>
   <div class="form-group">
-    <label for="email">Password</label>
-    <input type="email" class="form-control" name="user_password" />
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="user_password" />
   </div>
   <div>
     <input class='btn btn-primary' type="submit" name="create_user" value="Add User" />
