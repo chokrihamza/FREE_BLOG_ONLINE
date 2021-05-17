@@ -14,29 +14,44 @@
     </form>
 
 
-
     <!--search form-->
     <!-- /.input-group -->
   </div>
+  <!-- Login -->
+  <div class="well">
+    <h4>Login</h4>
+    <form action="includes/login.php" method="post">
+      <div class="from-group">
+        <input name="username" placeholder="Enter User name" type="text" class="form-control">
+      </div>
+      <div class="input-group">
+        <input name="password" placeholder="Enter Password" type="password" class="form-control">
+        <span class="input-group-btn"><button name="login" class="btn btn-primary" type="submit">Login</button></span>
+      </div>
 
+
+
+
+    </form>
+  </div>
 
   <!-- Blog Categories Well -->
   <div class="well">
     <?php
-           $query="SELECT * FROM categories ";
-           $select_categories_sidebar=mysqli_query($connection,$query);
-    ?>
+      $query = "SELECT * FROM categories ";
+      $select_categories_sidebar = mysqli_query($connection, $query);
+      ?>
     <h4>Blog Categories</h4>
     <div class="row">
       <div class="col-lg-12">
         <ul class="list-unstyled">
           <?php
-            while($row=mysqli_fetch_assoc($select_categories_sidebar)){
-              $cat_title= $row['cat_title'];
-            $cat_id = $row['cat_id'];
-            echo "<li><a href='category.php?category=$cat_id'>{$cat_title}</a></li>";
-             }
-        ?>
+            while ($row = mysqli_fetch_assoc($select_categories_sidebar)) {
+              $cat_title = $row['cat_title'];
+              $cat_id = $row['cat_id'];
+              echo "<li><a href='category.php?category=$cat_id'>{$cat_title}</a></li>";
+            }
+            ?>
         </ul>
       </div>
 
@@ -44,6 +59,6 @@
     <!-- /.row -->
   </div>
   <!-- Side Widget Well -->
-  <?php include "widget.php"?>
+  <?php include "widget.php" ?>
 
 </div>
