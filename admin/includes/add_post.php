@@ -12,7 +12,7 @@ if (isset($_POST["create_post"])) {
   //$post_comment_count = 4;
   move_uploaded_file($post_image_temp, "../images/$post_image");
   $query =
-  "INSERT INTO posts(post_category_id,post_title,
+    "INSERT INTO posts(post_category_id,post_title,
   post_author,post_date,post_image,post_content,
   post_tags,post_status) ";
   $query .= "VALUES('{$post_category_id}','{$post_title}','{$post_author}',now(),
@@ -65,7 +65,7 @@ if (isset($_POST["create_post"])) {
   </div>
   <div class="form-group">
     <label for="title">Post Content</label>
-    <textarea class="form-control" name="post_content" id="" cols="30" rows="10">
+    <textarea class="form-control" name="post_content" id="mytextarea" cols="30" rows="10">
     </textarea>
   </div>
   <div>
