@@ -7,13 +7,13 @@ $(document).ready(function () {
   $('#selectAllPosts').click(function (event) {
     if (this.checked) {
 
-      $('.checkBoxes').each(function () {
+      $("input").each(function () {
         this.checked = true;
       });
     } else {
 
 
-      $('.ckeckBoxes').each(function () {
+      $("input").each(function () {
         this.checked = false;
       });
     }
