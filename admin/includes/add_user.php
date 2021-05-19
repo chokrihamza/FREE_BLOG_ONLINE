@@ -20,6 +20,7 @@ if (isset($_POST["create_user"])) {
    '{$user_role}','{$username}','{$user_email}','{$user_password}') ";
   $create_user_query = mysqli_query($connection, $query);
   confirmQuery($create_user_query);
+  echo "user created successfully" . " " . "<a href='users.php'>View Users</a>";
 }
 
 

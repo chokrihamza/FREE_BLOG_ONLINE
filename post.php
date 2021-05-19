@@ -43,7 +43,7 @@
       <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
       <hr>
       <p><?php echo $post_content ?></p>
-      <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
 
       <hr>
       <?php } ?>
@@ -61,9 +61,9 @@
           die('Query failed' . mysqli_error($connection));
         }
 
-        $query="UPDATE posts SET post_comment_count=post_comment_count+1 ";
-        $query.="WHERE post_id=$the_post_id ";
-        $update_comment_count=mysqli_query($connection, $query);
+        $query = "UPDATE posts SET post_comment_count=post_comment_count+1 ";
+        $query .= "WHERE post_id=$the_post_id ";
+        $update_comment_count = mysqli_query($connection, $query);
       }
       ?>
 
@@ -91,18 +91,18 @@
 
       <!-- Posted Comments -->
       <?php
-      $query="SELECT * FROM comments WHERE comment_post_id={$the_post_id} ";
-      $query.="AND comment_status='approved' ";
-      $query.="ORDER BY comment_id DESC ";
-      $select_comment_query=mysqli_query($connection,$query);
-      if(!$select_comment_query){
-        die('Query failed'.mysqli_error($connection));
+      $query = "SELECT * FROM comments WHERE comment_post_id={$the_post_id} ";
+      $query .= "AND comment_status='approved' ";
+      $query .= "ORDER BY comment_id DESC ";
+      $select_comment_query = mysqli_query($connection, $query);
+      if (!$select_comment_query) {
+        die('Query failed' . mysqli_error($connection));
       }
-     while ($row=mysqli_fetch_array($select_comment_query)) {
-       $comment_date=$row['comment_date'];
-       $comment_content=$row['comment_content'];
-       $comment_author=$row['comment_author'];
-       ?>
+      while ($row = mysqli_fetch_array($select_comment_query)) {
+        $comment_date = $row['comment_date'];
+        $comment_content = $row['comment_content'];
+        $comment_author = $row['comment_author'];
+      ?>
       <!-- Comment -->
       <div class="media">
         <a class="pull-left" href="#">
