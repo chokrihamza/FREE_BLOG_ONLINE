@@ -3,7 +3,7 @@
     <tr>
       <th>ID</th>
       <th>Username</th>
-      <th>Password</th>
+      <!-- <th>Password</th> -->
       <th>Fistname</th>
       <th>Lastname</th>
       <th>Email</th>
@@ -19,7 +19,7 @@
     while ($row = mysqli_fetch_assoc($select_users)) {
       $user_id = $row['user_id'];
       $username = $row['username'];
-      $user_password = $row['user_password'];
+      // $user_password = $row['user_password'];
       $user_firstname = $row['user_firstname'];
       $user_lastname = $row['user_lastname'];
       $user_email = $row['user_email'];
@@ -29,7 +29,7 @@
       echo "<tr>";
       echo "<td>{$user_id}</td>";
       echo "<td>{$username}</td>";
-      echo "<td>{$user_password}</td>";
+      // echo "<td>{$user_password}</td>";
       echo "<td>{$user_firstname}</td>";
       // $query = "SELECT * FROM categories WHERE cat_id={$post_category_id} ";
       // $select_categories_id = mysqli_query($connection, $query);
