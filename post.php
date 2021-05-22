@@ -12,20 +12,23 @@
 
       <?php
       if (isset($_GET['p_id'])) {
-        $the_post_id = $_GET['p_id'];
-      }
-      $query = "SELECT * FROM posts WHERE post_id=$the_post_id ";
-      $select_all_posts_query = mysqli_query($connection, $query);
+          $the_post_id = $_GET['p_id'];
+          $query="UPDATE posts SET post_views_count=post_views_count+1 WHERE post_id=$the_post_id ";
+          $send_query=mysqli_query($connection, $query);
+          if(!$send_query){
+            die('query failed');
+          }
+          $query = "SELECT * FROM posts WHERE post_id=$the_post_id ";
+          $select_all_posts_query = mysqli_query($connection, $query);
 
-      while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
-        $post_id = $row['post_id'];
-        $post_title = $row['post_title'];
-        $post_author = $row['post_author'];
-        $post_date = $row['post_date'];
-        $post_image = $row['post_image'];
-        $post_content = $row['post_content'];
-        //echo "<li><a href='#'>{$post_title}</a></li>";
-      ?>
+          while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
+              $post_id = $row['post_id'];
+              $post_title = $row['post_title'];
+              $post_author = $row['post_author'];
+              $post_date = $row['post_date'];
+              $post_image = $row['post_image'];
+              $post_content = $row['post_content'];
+              //echo "<li><a href='#'>{$post_title}</a></li>";?>
 
       <h1 class="page-header">
         Page Heading
@@ -46,11 +49,16 @@
 
 
       <hr>
-      <?php } ?>
+      <?php
+          }
+      }else{
+        header("Location:index.php");
+      }
+       ?>
       <!-- Blog Comments -->
       <?php
       if (isset($_POST['create_comment'])) {
-        
+
 
 
         $the_post_id = $_GET['p_id'];

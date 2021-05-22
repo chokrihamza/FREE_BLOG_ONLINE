@@ -18,4 +18,25 @@ $(document).ready(function () {
       });
     }
   });
+  //var div_box = "<div id='load-screen'><div id='loading'></div></div>";
+  $("body").prepend("hi");
+  // $('#load-screen').delay(700).fadeOut(600, function () {
+  //   $(this).remove();
+  // })
+
+
 });
+
+
+
+
+
+
+// function loadUsersOnline() {
+//   $.get("function.php?onlineusers=result", function (data) {
+//     $(".usersonline").text(data)
+//   })
+// }
+// setInterval(() => {
+//   loadUsersOnline();
+// }, 500);
