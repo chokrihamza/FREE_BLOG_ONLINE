@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: rgba(236, 28, 28, 0.966);
+    background-color: #222;
 }
 
 @media(min-width:768px) {
@@ -24,7 +24,7 @@ body {
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: rgb(238, 45, 45);
+    background-color: #fff;
 }
 
 .huge {
@@ -66,7 +66,7 @@ body {
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
     color: #fff;
-    background-color: rgb(255, 132, 132);
+    background-color: #000;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -221,8 +221,4 @@ ul.alert-dropdown {
 
 .panel-yellow a:hover {
     color: #df8a13;
-}
-
-.bulkOptionsContainer{
-    padding: 0%;
 }
