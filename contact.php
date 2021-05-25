@@ -1,6 +1,14 @@
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
 <?php
+  // the message
+  $msg = "hi hamza";
+
+  // use wordwrap() if lines are longer than 70 characters
+  $msg = wordwrap($msg, 70);
+
+  // send email
+  mail("chokrihamza1994@gmail.com", "My subject", $msg);
 if (isset($_POST['submit'])) {
   $to = "chokrihamza1994@gmail.com";
   $subject = $_POST['subject'];
